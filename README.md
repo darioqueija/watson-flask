@@ -2,9 +2,10 @@
 
 * Install [anaconda](https://docs.anaconda.com/anaconda/install/index.html).
 * Create [conda env](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+* Install [pip](https://docs.python.org/3/installing/index.html).
 * Install project dependencies:
 
-~~~
+~~~ bash
 pip install -r requirements.txt
 ~~~
 
@@ -16,7 +17,7 @@ pip install -r requirements.txt
 	* [Getting started](https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started).
 * Create configuration file:
 
-~~~
+~~~ bash
 cp conf/config.properties.template conf/config.properties
 ~~~
 
@@ -31,3 +32,46 @@ cp conf/config.properties.template conf/config.properties
 		* VERSION
 
 ## Flask App
+
+* Configure environment variables from Flask:
+
+~~~ bash
+export FLASK_ENV=development
+export FLASK_APP=<app-name>
+~~~
+
+Choose app
+
+This project has two apps:
+1. hello
+1. chat
+
+### Hello
+
+~~~ bash
+export FLASK_APP=hello
+~~~
+
+Endpoints:
+* / -> hello work com flask
+* /start -> create watson session
+* /talk/<message> -> send message to watson
+* /stop -> destroy watson session
+
+### Chat
+
+~~~ bash
+export FLASK_APP=chat
+~~~
+
+Use frontend code from [assistant-simple](https://github.com/watson-developer-cloud/assistant-simple) from IBM to provide a web chat. This is interact from flask web services and watson assistant.
+
+# Run App
+
+After config app, run flask:
+
+~~~ bash
+flask run
+~~~
+
+Access your browser __http://localhost:5000/__.

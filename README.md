@@ -53,7 +53,7 @@ export FLASK_APP=hello
 ~~~
 
 Endpoints:
-* / -> hello work com flask
+* / -> hello world with flask
 * /start -> create watson session
 * /talk/<message> -> send message to watson
 * /stop -> destroy watson session

@@ -79,6 +79,7 @@ Access in your browser __http://localhost:8000/__.
 
 * Create your app python on [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview):
 	* Create a python application.
+	* Configure with 256MB or more.
 	* Add name application: <APP_NAME>.
 * Open [Cloud IBM shell](https://cloud.ibm.com/shell).
 * Clone this project and configure.

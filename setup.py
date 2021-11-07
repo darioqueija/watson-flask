@@ -16,5 +16,11 @@ setup(
     description='Exemple to running watson with flask',
     long_description=long_description,
     url='https://github.com/marcelodcc/watson-flask',
-    license='Apache-2.0'
+    license='Apache-2.0',
+    entry_points={
+        'console_scripts': [
+            'watson-flask = chat:main',
+        ],
+    },
+
 )

@@ -73,4 +73,37 @@ or
 python chat.py
 ~~~
 
-Access your browser __http://localhost:8000/__.
+Access in your browser __http://localhost:8000/__.
+
+# Run on IBM Bluemix
+
+* Create your app python on [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview):
+	* Create a python application.
+	* Add name application: <APP_NAME>.
+* Open [Cloud IBM shell](https://cloud.ibm.com/shell).
+* Clone this project and configure.
+
+~~~ bash
+git clone https://github.com/marcelodcc/watson-flask
+~~~
+
+* Configure property __name__ with <APP_NAME> on __manifest.yml__ file.
+* Install project dependencies:
+
+~~~ bash
+pip install -r requirements.txt
+~~~
+
+* Deploy application:
+
+~~~ bash
+ibmcloud cf push <APP_NAME>
+~~~
+
+* Get path your application:
+
+~~~ bash
+ibmcloud cf apps
+~~~
+
+Access in your browser __<APP_NAME>.<your_region>.cf.appdomain.cloud__.

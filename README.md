@@ -64,7 +64,7 @@ Endpoints:
 export FLASK_APP=chat
 ~~~
 
-This app fork a IBM frontend code from [assistant-simple](https://github.com/watson-developer-cloud/assistant-simple) to provide a web chat. This is interact from flask web services and watson assistant.
+This app fork a IBM frontend code with name [assistant-simple](https://github.com/watson-developer-cloud/assistant-simple) to provide a web chat. Frontend interacts with flask web services and watson assistant.
 
 # Run App
 

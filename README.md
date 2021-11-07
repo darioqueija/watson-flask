@@ -36,9 +36,10 @@ cp conf/config.properties.template conf/config.properties
 * Configure environment variables from Flask:
 
 ~~~ bash
-export FLASK_ENV=development
-export FLASK_APP=<app-name>
+export PORT=${?:8000}
 ~~~
+
+Default port is 8000.
 
 Choose app
 
@@ -48,10 +49,6 @@ This project has two apps:
 
 ### Hello
 
-~~~ bash
-export FLASK_APP=hello
-~~~
-
 Endpoints:
 * / -> hello world with flask
 * /start -> create watson session
@@ -60,10 +57,6 @@ Endpoints:
 
 ### Chat
 
-~~~ bash
-export FLASK_APP=chat
-~~~
-
 This app fork a IBM frontend code with name [assistant-simple](https://github.com/watson-developer-cloud/assistant-simple) to provide a web chat. Frontend interacts with flask web services and watson assistant.
 
 # Run App
@@ -71,7 +64,13 @@ This app fork a IBM frontend code with name [assistant-simple](https://github.co
 After config app, run flask:
 
 ~~~ bash
-flask run
+python hello.py
 ~~~
 
-Access your browser __http://localhost:5000/__.
+or
+
+~~~ bash
+python chat.py
+~~~
+
+Access your browser __http://localhost:8000/__.

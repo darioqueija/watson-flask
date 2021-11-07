@@ -1,5 +1,6 @@
 import json
 import configparser
+import os
 from flask import Flask, render_template
 from ibm_watson import AssistantV2
 from ibm_watson import ApiException
@@ -98,5 +99,8 @@ def talk(text):
 ## CONFIGURE FLASK INITIALIZE
 port = int(os.getenv('PORT', 8000))
 
-if __name__ == '__main__':
+def main():
     app.run(host='0.0.0.0', port=port, debug=True)
+
+if __name__ == '__main__':
+    main()

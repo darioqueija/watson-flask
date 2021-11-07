@@ -31,13 +31,13 @@ def watson_assistant():
     assistant.set_disable_ssl_verification(without_ssl)
 
 ## INTANTIATE FLASK AND WATSON ASSISTANT
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 watson_assistant()
 
 ## LOAD FRONTEND
 @app.route('/')
 def index():
-    return render_template('index-chat.html')
+    return app.send_static_file('index-chat.html')
 
 ## CREATE WATSON SESSION ROUTE
 @app.route('/api/session')

@@ -1,0 +1,4 @@
+apps:
+- name: watson-flask
+  random-route: true
+  memory: 128M

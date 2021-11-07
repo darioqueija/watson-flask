@@ -95,3 +95,9 @@ def session_stop():
             'text': 'Method failed with status code ' + str(ex.code) + ': ' + ex.message
           },
         })
+
+## CONFIGURE FLASK INITIALIZE
+port = int(os.getenv('PORT', 8000))
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=port, debug=True)

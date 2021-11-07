@@ -87,6 +87,7 @@ Access in your browser __http://localhost:8000/__.
 git clone https://github.com/marcelodcc/watson-flask
 ~~~
 
+* Configure file config.properties like defined on [configuration session](https://github.com/marcelodcc/watson-flask#configuration).
 * Configure property __name__ with <APP_NAME> on __manifest.yml__ file.
 * Install project dependencies:
 

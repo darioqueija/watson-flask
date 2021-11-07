@@ -106,4 +106,4 @@ ibmcloud cf push <APP_NAME>
 ibmcloud cf apps
 ~~~
 
-Access in your browser __<APP_NAME>.<your_region>.cf.appdomain.cloud__.
+Access in your browser __https://<APP_NAME>.<your_region>.cf.appdomain.cloud__.

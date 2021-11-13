@@ -3,6 +3,7 @@ import configparser
 import os
 from flask import Flask, render_template
 from flask import request
+from flask import jsonify
 from ibm_watson import AssistantV2
 from ibm_watson import ApiException
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
@@ -96,6 +97,10 @@ def session_stop():
             'text': 'Method failed with status code ' + str(ex.code) + ': ' + ex.message
           },
         })
+
+@app.route('/api/webhook', methods=['POST'])
+def webhook():
+    return jsonify({ "name": "João da Silva" })
 
 ## CONFIGURE FLASK INITIALIZE
 port = int(os.getenv('PORT', 8000))
